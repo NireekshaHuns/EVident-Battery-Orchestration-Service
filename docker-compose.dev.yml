@@ -1,0 +1,31 @@
+services:
+  backend:
+    image: nireekshahuns/task-tracker-backend:dev
+    container_name: task-tracker-backend-dev
+    restart: always
+    ports:
+      - "5001:5000"
+    environment:
+      - NODE_ENV=development
+      - PORT=5000
+    env_file:
+      - .env.dev
+    volumes:
+      - task-data-dev:/app/data
+
+  frontend:
+    image: nireekshahuns/task-tracker-frontend:dev
+    container_name: task-tracker-frontend-dev
+    restart: always
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - .env.dev
+    depends_on:
+      - backend
+
+volumes:
+  task-data-dev:
+    driver: local
