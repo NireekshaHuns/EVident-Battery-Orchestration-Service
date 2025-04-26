@@ -1,0 +1,19 @@
+services:
+  backend-test:
+    image: nireekshahuns/task-tracker-backend:dev
+    container_name: task-tracker-backend-test
+    command: npm run test:isolated
+    environment:
+      - NODE_ENV=test
+      - PORT=5000
+    volumes:
+      - task-data-test:/app/data
+
+  frontend-test:
+    image: nireekshahuns/task-tracker-frontend:dev
+    container_name: task-tracker-frontend-test
+    command: npm run test
+
+volumes:
+  task-data-test:
+    driver: local

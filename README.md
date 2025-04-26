@@ -37,6 +37,24 @@ Docker Compose configuration for deploying the Task Tracker application in devel
    - Frontend: http://localhost:5173
    - Backend API: http://localhost:5001
 
+## Test Instructions
+
+### Frontend Tests
+
+1. Start frontend tests:
+
+   ```bash
+   docker compose -f docker-compose.test.yml up --exit-code-from frontend-test --abort-on-container-exit frontend-test
+   ```
+
+### Backend Tests
+
+1. Start backend tests:
+
+   ```bash
+   docker compose -f docker-compose.test.yml up --exit-code-from backend-test --abort-on-container-exit backend-test
+   ```
+
 ## Notes
 
 - Images are pulled directly from Docker Hub
