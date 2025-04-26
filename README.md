@@ -10,7 +10,8 @@ Docker Compose configuration for deploying the Task Tracker application in devel
 ├── .env.prod                     # Production environment variables
 ├── .env.prod.example             # Example production environment variables
 ├── docker-compose.dev.yml        # Docker Compose configuration for development
-└── docker-compose.prod.yml       # Docker Compose configuration for production
+├── docker-compose.prod.yml       # Docker Compose configuration for production
+└── docker-compose.test.yml       # Docker Compose configuration for tests
 ```
 
 ## Setup Instructions
