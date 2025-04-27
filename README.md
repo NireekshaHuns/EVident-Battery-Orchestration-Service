@@ -37,6 +37,7 @@ Docker Compose configuration for deploying the Task Tracker application in devel
 4. Access:
    - Frontend: http://localhost:5173
    - Backend API: http://localhost:5001
+   - Swagger documentation: http://localhost:5001/api-docs
 
 ## Test Instructions
 
